@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class GetDiamond implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender Sender, Command cmd, String label, String[] args) {
@@ -19,6 +21,7 @@ public class GetDiamond implements CommandExecutor {
         ItemMeta isMeta = is.getItemMeta();
         isMeta.setDisplayName(ChatColor.AQUA + "Diamante Explosivo");
         is.setItemMeta(isMeta);
+
         if (cmd.getName().equalsIgnoreCase("pegardiamante")) {
             p.setItemInHand(is);
         }

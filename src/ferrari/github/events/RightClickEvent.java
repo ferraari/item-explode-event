@@ -12,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.util.BlockIterator;
 
+import java.util.ArrayList;
+
 public class RightClickEvent implements Listener {
 
     @EventHandler
@@ -28,7 +30,7 @@ public class RightClickEvent implements Listener {
                 while (raytracer.hasNext()) {
                     Location location = raytracer.next().getLocation();
                     if (player.getWorld().getBlockAt(location).getType() != Material.AIR && !player.getWorld().getBlockAt(location).isLiquid()) {
-                        player.getWorld().createExplosion(location, 4f);
+                        player.getWorld().createExplosion(location, 5f);
                         player.sendMessage(ChatColor.GREEN + "Uow, que explosão");
                         return;
                     }

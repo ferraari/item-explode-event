@@ -2,6 +2,8 @@ package ferrari.github.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.block.CreatureSpawner;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,6 +11,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
 
 
 public class DropItemEven implements Listener {
@@ -21,6 +25,7 @@ public class DropItemEven implements Listener {
         is.setItemMeta(isMeta);
 
         if(event.getItemDrop().getItemStack().equals(is)) {
+
 
 
             event.setCancelled(true);
